@@ -67,12 +67,17 @@
       </plugin>
 
       <!-- Sonar Maven plugin (used by mvn sonar:sonar) -->
-      <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.4.0.905</version>
-      </plugin>
-
+     <build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.4.0.905</version>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+</build>
       <!-- Optional: tomcat7 plugin if you want maven-based deploy (alternative to curl in CI) -->
       <!--
       <plugin>
